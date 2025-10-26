@@ -580,8 +580,8 @@ footer .footer_content p a:hover{
         width: 100%;
         padding: 10px 0;
         height: 100vh;
-        opacity: 10;
-        transform: translateY(-650px);
+        opacity: 0;
+        transform: translateY(-780px);
         transition: opacity 0.3s ease, transform 0.3s ease;
         text-align: center;
     }
@@ -621,3 +621,4 @@ footer .footer_content p a:hover{
     }
 
 }
+
