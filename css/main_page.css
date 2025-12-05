@@ -99,6 +99,10 @@ body{
     background-color: var(--primary-color);
     transition: background-color var(--transition-duration) ease;
 }
+#main_nav .nav_links li a{
+    color: var(--text-color);
+    text-decoration: none;
+}
 /*primera parte del inicio*/
 .inicio_uno{
     display: flex;
