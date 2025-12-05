@@ -1,0 +1,199 @@
+:root {
+    --primary-color: #038C33;
+    --secondary-color: #013614;
+    --third-color: #070707;
+    --background-color: #f5f5f5;
+    --bg-color-opacity:#010c05d9;
+    --text-color: #ffffff;
+    --border-radius: 20px;
+    --transition-duration: 0.3s;
+    --btn-shadow:  #171717 0px 8px 12px;
+    --img-filter: brightness(60%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.examen_intro, .examen_detalles, .examen_cursos{
+    height: 50vh;
+    margin: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--btn-shadow);
+    background-color:var(--bg-color-opacity);
+    overflow: hidden;
+}
+body{
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.examen_intro{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color-opacity);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    overflow: hidden;    
+}
+.examen_intro .textos{
+    color: var(--text-color);
+    width: 100%;
+    max-width: 800px;
+    z-index: 2;
+}
+.examen_intro .textos h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+.examen_intro .textos p{
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+.examen_intro .imagen{
+    position: absolute;
+    z-index: 1;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+}
+.examen_intro .imagen img{
+    width: 100%;
+    height: 100%;
+    object-position:0% 20%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    filter: var(--img-filter);
+    box-shadow: var(--btn-shadow);
+}
+.examen_detalles, .examen_cursos{
+    background-color: var(--bg-color-opacity);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    color: var(--text-color);
+    display: flex;
+    width: fit-content;
+    gap: 20px;
+}
+.examen_detalles .textos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+.examen_detalles h2, .examen_cursos h2{
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.examen_detalles p, .examen_cursos p{
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+.examen_detalles .imagen{
+    width: 100%;
+    height: 100%;
+}
+.examen_detalles .imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--btn-shadow);
+    filter: var(--img-filter);
+}
+.examen_cursos .textos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+.examen_cursos .textos h2{
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.examen_cursos .textos p{
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+.examen_cursos .cursos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+.examen_cursos .cursos .img{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.examen_cursos .cursos .img:hover{
+    transform: scale(1.05);
+    transition: transform var(--transition-duration);
+    cursor: pointer;
+    }
+.examen_cursos .cursos .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--btn-shadow);
+    filter: var(--img-filter);
+}
+.examen_cursos .cursos .img:hover img{
+    filter: brightness(80%);
+    transition: filter var(--transition-duration);
+}
+
+@media (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+    .examen_detalles, .examen_cursos{
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+    }
+    .examen_intro .textos h1{
+        font-size: 2.3rem;
+    }
+    .examen_intro .textos p{
+        font-size: 1rem;
+    }
+    .examen_intro .textos a{
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+@media (max-width: 767px) {
+    .examen_detalles, .examen_cursos{
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+    }
+    .examen_detalles .textos, .examen_cursos .textos{
+        width: 100%;
+    }
+    .examen_intro .textos h1{
+        font-size: 2.2rem;
+    }
+    .examen_intro .textos p{
+        font-size: 1rem;
+    }
+    .examen_intro .textos a{
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
